@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{52280A67-E958-4AD4-B069-11A6004FB928}</ProjectGuid>
+    <ProjectGuid>{33454CA1-C206-42A0-A54D-57A9F98E028A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractFactory</RootNamespace>
-    <AssemblyName>AbstractFactory</AssemblyName>
+    <RootNamespace>Adapter</RootNamespace>
+    <AssemblyName>Adapter</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,21 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConcreteFactories\MacOSGUIFactory.cs" />
-    <Compile Include="ConcreteFactories\WindowsGUIFactory.cs" />
-    <Compile Include="Interfaces\IButton.cs" />
-    <Compile Include="Interfaces\IGUIFactory.cs" />
-    <Compile Include="Interfaces\ITextBox.cs" />
+    <Compile Include="Adapter\ThirdPartyLoggerAdapter.cs" />
+    <Compile Include="Application\MyApplication.cs" />
+    <Compile Include="Interfaces\IMyLogger.cs" />
+    <Compile Include="Loggers\MyLogger.cs" />
+    <Compile Include="Loggers\ThirdPartyLogger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Application.cs" />
-    <Compile Include="UI\MacOSButton.cs" />
-    <Compile Include="UI\MacOSTextBox.cs" />
-    <Compile Include="UI\WindowsButton.cs" />
-    <Compile Include="UI\WindowsTextBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
